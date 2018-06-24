@@ -13,7 +13,7 @@
 #include <cstdlib>
 #include <locale.h>
 
-int perymetr(int n);
+int perimeter(int n);
 int main()
 {
 	setlocale(LC_ALL, "rus");
@@ -25,7 +25,7 @@ int main()
 		system("pause");
 			return 0;
 	}
-	printf("Периметр многоугольника: %lf\n", perymetr(n));
+	printf("Периметр многоугольника: %lf\n", perimeter(n));
 	system("pause");
 	return 0;
 }
@@ -36,7 +36,7 @@ int main()
 *@return P - периметр многоугольника
 */
 
-int perymetr(int n)
+int perimeter(int n)
 {
 	double x1, y1, xa, ya, xb, yb, d, P;
 	d = 0;
