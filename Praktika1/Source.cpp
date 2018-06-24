@@ -1,3 +1,13 @@
+
+
+
+/**
+* @file Source.cpp
+* @author Рыжова Д.И., гр. 515а
+* @date 24 июня 2018
+* @brief Летняя практика
+*/
+
 #include <stdio.h>
 #include <math.h>
 #include <cstdlib>
@@ -19,6 +29,13 @@ int main()
 	system("pause");
 	return 0;
 }
+
+/**
+* Поиск периметра многоугольника.
+*@param n - количество сторон многоугольника.
+*@return P - периметр многоугольника
+*/
+
 int perymetr(int n)
 {
 	double x1, y1, xa, ya, xb, yb, d, P;
@@ -39,7 +56,6 @@ int perymetr(int n)
 	}
 	d = sqrt(((xa - x1)*(xa - x1)) + ((ya - y1)*(ya - y1)));
 	P = P + d;
-	printf("Периметр многоугольника: %lf\n", P);
 	system("pause");
 	return(P);
 }
