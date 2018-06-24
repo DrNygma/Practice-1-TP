@@ -3,15 +3,27 @@
 #include <cstdlib>
 #include <locale.h>
 
-int main(void)
+int perymetr(int n);
+int main()
 {
 	setlocale(LC_ALL, "rus");
-	double x1, y1, xa, ya, xb, yb,d,P;
-	d = 0;
-	P = 0;
 	int n;
 	printf("Введите количество сторон многоугольника: ");
 	scanf_s("%i", &n);
+	if (n <= 2) {
+		printf("Данная фигура не является многоугольником.\n");
+		system("pause");
+			return 0;
+	}
+	printf("Периметр многоугольника: %lf\n", perymetr(n));
+	system("pause");
+	return 0;
+}
+int perymetr(int n)
+{
+	double x1, y1, xa, ya, xb, yb, d, P;
+	d = 0;
+	P = 0;
 	printf("Введите координаты точки многоугольника: ");
 	scanf_s("%lf%lf", &x1, &y1);
 	xa = x1;
@@ -25,9 +37,9 @@ int main(void)
 		xa = xb;
 		ya = yb;
 	}
-	d = sqrt(((xa- x1)*(xa - x1)) + ((ya - y1)*(ya - y1)));
+	d = sqrt(((xa - x1)*(xa - x1)) + ((ya - y1)*(ya - y1)));
 	P = P + d;
-	printf("Периметр многоугольника: %lf\n",P);
+	printf("Периметр многоугольника: %lf\n", P);
 	system("pause");
-	return 0;
+	return(P);
 }
